@@ -1,0 +1,14 @@
+[user]
+	name = Ilia Barahovsky
+	# email = name@server.com
+[push]
+	default = simple
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	st = status
+[merge]
+	defaultToUpstream = true
+[log]
+	decorate = auto

@@ -1,0 +1,6 @@
+# Put this file to ~/.gitconfig and edit the email
+
+[user]
+    email = someone@any.server.com
+[include]
+    path = ~/workspace/snippets/data/gitconfig

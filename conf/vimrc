@@ -1,0 +1,16 @@
+" Tabulation and indentation
+set expandtab
+set tabstop=4
+set softtabstop=4
+set autoindent
+set shiftwidth=4
+
+" Line numbers
+set number
+set numberwidth=4
+
+" Backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
