@@ -1,3 +1,4 @@
 # snippets
 
-They will soon appear here. Just wait.
+* `notes/` - code snippets and thematic notes
+* `conf/` - tools configs
