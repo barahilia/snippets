@@ -62,7 +62,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Ilia: update PATH
-# XXX verify the directories exist and not in $PATH already
-# PATH=$PATH:$HOME/bin:$HOME/.local/bin
