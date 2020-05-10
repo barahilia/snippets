@@ -3,4 +3,4 @@
 [user]
     email = someone@any.server.com
 [include]
-    path = ~/workspace/snippets/data/gitconfig
+    path = ~/repos/snippets/conf/gitconfig
