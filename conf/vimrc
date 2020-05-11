@@ -1,4 +1,7 @@
-" Tabulation and indentation
+syntax on
+
+" Indentation
+filetype plugin indent on
 set expandtab
 set tabstop=4
 set softtabstop=4
