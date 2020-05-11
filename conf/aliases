@@ -1,4 +1,4 @@
-alias df='df -h'
+alias df='df -h -x"squashfs"'
 alias du='du -h'
 alias free='free -h'
 alias md='mkdir'
