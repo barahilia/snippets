@@ -65,3 +65,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Setup fasd
+if [ -x ~/bin/fasd ]; then
+    eval "$(fasd --init auto)"
+fi
