@@ -1,6 +1,8 @@
 #!/bin/sh
 
-sudo apt install tmux git vim
+sudo apt install \
+    tmux git vim \
+    openjdk-11-jre-headless
 
 rmdir \
     ~/Desktop ~/Templates ~/Documents \
