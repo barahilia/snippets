@@ -1,13 +1,14 @@
 #!/bin/sh
 
-sudo apt install \
+sudo apt install -y \
     tmux git vim \
     openjdk-11-jre-headless
 
 rmdir \
-    ~/Desktop ~/Templates ~/Documents \
-    ~/Music ~/Pictures ~/Videos
+    ~/Desktop ~/Public ~/Templates ~/Documents \
+    ~/Music ~/Pictures ~/Videos ~/Downloads
 
-mkdir \
-    ~/bin ~/data ~/proj ~/repos ~/tmp \
+mkdir -p \
+    ~/bin ~/proj ~/repos ~/tmp \
+    ~/data ~/data/desktop \
     ~/.local ~/.local/bin
