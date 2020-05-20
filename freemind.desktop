@@ -1,0 +1,8 @@
+[Desktop Entry]
+# Put this file to ~/.local/share/applications
+Name=FreeMind
+Exec=/opt/freemind/freemind.sh
+Terminal=false
+Icon=/opt/freemind/76812-freemind_v0.4.png
+Type=Application
+StartupWMClass=FreeMind
