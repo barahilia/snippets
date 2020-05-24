@@ -2,6 +2,7 @@
 
 sudo apt install -y \
     tmux git vim \
+    python3-pip \
     openjdk-11-jre-headless
 
 rmdir \
@@ -12,3 +13,5 @@ mkdir -p \
     ~/bin ~/proj ~/repos ~/tmp \
     ~/data ~/data/desktop \
     ~/.local ~/.local/bin
+
+ln -s /usr/bin/python3 ~/bin/python
