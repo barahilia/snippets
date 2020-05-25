@@ -1,14 +1,18 @@
 [user]
 	name = Ilia Barahovsky
 	# email = name@server.com
+[core]
+    editor = vim
 [push]
 	default = simple
-[color]
-	ui = auto
+[merge]
+	defaultToUpstream = true
 [alias]
 	co = checkout
 	st = status
-[merge]
-	defaultToUpstream = true
+    fast = status -uno
+    ft = fetch --prune --prune-tags --force
+[color]
+	ui = auto
 [log]
 	decorate = auto
