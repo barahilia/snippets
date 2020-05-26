@@ -3,7 +3,8 @@
 sudo apt install -y \
     tmux git vim \
     python3-pip \
-    openjdk-11-jre-headless
+    openjdk-11-jre-headless \
+    fasd
 
 rmdir \
     ~/Desktop ~/Public ~/Templates ~/Documents \
@@ -15,3 +16,6 @@ mkdir -p \
     ~/.local ~/.local/bin
 
 ln -s /usr/bin/python3 ~/bin/python
+ln -s /usr/bin/fasd ~/bin/fasd
+
+pip3 install --upgrade
