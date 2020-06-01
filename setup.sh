@@ -4,7 +4,7 @@ sudo apt install -y \
     tmux git vim \
     python3-pip \
     openjdk-11-jre-headless \
-    fasd
+    fasd jq
 
 rmdir \
     ~/Desktop ~/Public ~/Templates ~/Documents \
