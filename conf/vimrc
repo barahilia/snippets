@@ -19,3 +19,6 @@ set noswapfile
 
 " Escape from Insert mode
 inoremap jk <ESC>
+
+" Aid to setup `lightline` plugin
+set laststatus=2
