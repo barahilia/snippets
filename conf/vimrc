@@ -22,3 +22,11 @@ inoremap jk <ESC>
 
 " Aid to setup `lightline` plugin
 set laststatus=2
+
+" Plugins with vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'ervandew/supertab'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
