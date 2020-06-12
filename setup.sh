@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo apt install -y \
-    tmux git vim \
+    tmux git vim curl \
     python3-pip \
     openjdk-11-jre-headless \
     fasd jq meld
