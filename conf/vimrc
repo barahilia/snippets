@@ -33,3 +33,4 @@ call plug#end()
 
 " Configure plugins
 let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
