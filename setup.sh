@@ -1,5 +1,8 @@
 #!/bin/sh
 
+repo_dir=$(dirname $0)
+conf_dir=${repo_dir}/conf
+
 sudo apt install -y \
     tmux git vim curl \
     python3-pip \
@@ -13,9 +16,22 @@ rmdir \
 mkdir -p \
     ~/bin ~/proj ~/repos ~/tmp \
     ~/data ~/data/desktop \
-    ~/.local ~/.local/bin
+    ~/.local ~/.local/bin \
+    ~/.config ~/.config/git
 
 ln -s /usr/bin/python3 ~/bin/python
 ln -s /usr/bin/fasd ~/bin/fasd
 
-pip3 install --upgrade
+ln -s ~/.profile ${conf_dir}/profile
+ln -s ~/.bashrc ${conf_dir}/bashrc
+ln -s ~/.aliases ${conf_dir}/aliases
+
+ln -s ~/.vimrc ${conf_dir}/vimrc
+ln -s ~/.tmux.conf ${conf_dir}/tmux.conf
+ln -s ~/.config/user-dirs.dirs ${conf_dir}/user-dirs.dirs
+
+cat ${conf_dir}/gitconfig.base \
+    sed "s.<CONF_DIR>.${conf_dir}." > ~/.config/git/config
+
+python -m pip install --upgrade pip
+pip install -r repo_dir/python.reqs

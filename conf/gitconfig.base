@@ -1,6 +1,6 @@
-# Put this file to ~/.gitconfig and edit the email
+# Put this file to ~/.config/git/config and edit the email
 
 [user]
     email = someone@any.server.com
 [include]
-    path = ~/repos/snippets/conf/gitconfig
+    path = <CONF_DIR>/gitconfig
