@@ -66,3 +66,9 @@ fi
 if [ -x ~/bin/fasd ]; then
     eval "$(fasd --init auto)"
 fi
+
+# Setup fzf
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_OPTS='-m --height 50% --border'
+source /usr/share/doc/fzf/examples/key-bindings.bash
+source /usr/share/doc/fzf/examples/completion.bash
