@@ -36,3 +36,7 @@ call plug#end()
 " Configure plugins
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
+
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fb :Buffers<CR>
+nnoremap <Leader>fr :Rg<CR>
