@@ -1,4 +1,6 @@
+" General
 syntax on
+set showcmd
 
 " Indentation
 filetype plugin indent on
@@ -17,7 +19,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Escape from Insert mode
+" Mappings
+let mapleader = " "
 inoremap jk <ESC>
 
 " Aid to setup `lightline` plugin
