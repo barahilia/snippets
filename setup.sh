@@ -7,7 +7,12 @@ sudo apt install -y \
     tmux git vim curl \
     python3-pip \
     openjdk-11-jre-headless \
-    fasd jq meld
+    fasd jq meld fzf ripgrep
+
+bat_deb=bat_0.15.4_amd64.deb
+curl -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
+sudo sudo dpkg -i $bat_deb
+rm $bat_deb
 
 rmdir \
     ~/Desktop ~/Public ~/Templates ~/Documents \
