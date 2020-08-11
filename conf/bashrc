@@ -70,12 +70,13 @@ fi
 # Setup and config fzf
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
+export FZF_CTRL_T_COMMAND='rg --files'
 export FZF_CTRL_T_OPTS="--preview '\
     bat --style=numbers --theme=OneHalfDark \
     --color=always --line-range :50 {}'"
 
-source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
+source ~/bin/fzf-etc/key-bindings.bash
+source ~/bin/fzf-etc/completion.bash
 
 # Config bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

@@ -1,6 +1,7 @@
 " General
 syntax on
 set showcmd
+set shell=/bin/bash
 
 " Indentation
 filetype plugin indent on
