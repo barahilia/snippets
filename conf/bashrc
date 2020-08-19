@@ -72,11 +72,11 @@ export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
 export FZF_CTRL_T_COMMAND='rg --files'
 export FZF_CTRL_T_OPTS="--preview '\
-    bat --style=numbers --theme=OneHalfDark \
-    --color=always --line-range :50 {}'"
+    bat --style=numbers --color=always --line-range :50 {}'"
 
 source ~/bin/fzf-etc/key-bindings.bash
 source ~/bin/fzf-etc/completion.bash
 
 # Config bat
+export BAT_THEME="OneHalfDark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
