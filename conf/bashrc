@@ -62,6 +62,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Unicode support
+LANG=en_IL.UTF-8
+
 # Setup fasd
 if [ -x ~/bin/fasd ]; then
     eval "$(~/bin/fasd --init auto)"
