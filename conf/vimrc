@@ -23,6 +23,7 @@ set noswapfile
 " Mappings
 let mapleader = " "
 inoremap jk <ESC>
+nnoremap <Leader>w <C-w>
 
 " Aid to setup `lightline` plugin
 set laststatus=2
@@ -32,7 +33,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
@@ -40,6 +43,10 @@ call plug#end()
 " Configure plugins
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
+
+nnoremap <Leader>t :NERDTreeToggle<CR>
+
+colo seoul256
 
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fr :Rg<CR>
