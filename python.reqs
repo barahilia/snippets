@@ -14,3 +14,9 @@ opencv-python
 Pillow
 
 tldr
+
+# Linting and refactoring
+flake8
+rope
+ropemode
+ropevim
