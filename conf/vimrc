@@ -1,6 +1,7 @@
 " General
 syntax on
 set showcmd
+set encoding=utf-8
 set shell=/bin/bash
 
 " Indentation
@@ -47,7 +48,7 @@ let g:NERDCommentEmptyLines = 1
 
 nnoremap <Leader>t :NERDTreeToggle<CR>
 
-colo seoul256
+colorscheme seoul256
 
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fr :Rg<CR>
