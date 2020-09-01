@@ -11,7 +11,7 @@ sudo apt install -y \
 
 bat_deb=bat_0.15.4_amd64.deb
 curl -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
-sudo sudo dpkg -i $bat_deb
+sudo dpkg -i $bat_deb
 rm $bat_deb
 
 rmdir \
