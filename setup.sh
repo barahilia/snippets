@@ -30,6 +30,7 @@ ln -s /usr/bin/fasd ~/bin/fasd
 ln -s ~/.profile ${conf_dir}/profile
 ln -s ~/.bashrc ${conf_dir}/bashrc
 ln -s ~/.aliases ${conf_dir}/aliases
+ln -s ~/.inputrc ${conf_dir}/inputrc
 
 ln -s ~/.vimrc ${conf_dir}/vimrc
 ln -s ~/.tmux.conf ${conf_dir}/tmux.conf

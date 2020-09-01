@@ -1,0 +1,9 @@
+# Use Vi, not Emacs, style editing
+set editing-mode vi
+
+# Ignore case
+set completion-ignore-case on
+
+# Keymaps for insert mode
+set keymap vi-insert
+"jk": "\e"
