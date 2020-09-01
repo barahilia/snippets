@@ -14,6 +14,12 @@ curl -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
 sudo dpkg -i $bat_deb
 rm $bat_deb
 
+mkdir -p ~/bin/fzf-etc
+curl -o ~/bin/fzf-etc/completion.bash \
+    https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
+curl -o ~/bin/fzf-etc/key-bindings.bash \
+    https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
+
 rmdir \
     ~/Desktop ~/Public ~/Templates ~/Documents \
     ~/Music ~/Pictures ~/Videos ~/Downloads
