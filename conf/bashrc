@@ -63,7 +63,8 @@ if ! shopt -oq posix; then
 fi
 
 # Unicode support
-LANG=en_IL.UTF-8
+LANG=en_GB.UTF-8
+LC_ALL=en_GB.UTF-8
 
 # Setup fasd
 if [ -x ~/bin/fasd ]; then
