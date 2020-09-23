@@ -54,3 +54,5 @@ nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fr :Rg<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fl :Lines<CR>
+nnoremap <Leader>fw :BLines<CR>
+nnoremap <Leader>fc :History:<CR>
