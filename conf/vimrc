@@ -46,7 +46,7 @@ call plug#end()
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 
-nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 
 colorscheme seoul256
 
