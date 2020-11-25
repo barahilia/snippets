@@ -12,6 +12,7 @@
     st = status
     fast = status -uno
     ft = fetch --prune --prune-tags --force
+    lone = log --date=short --pretty='format:%C(yellow)%h %C(blue)%ad %C(green)%aN%C(red)%d %C(reset)%s'
 [color]
     ui = auto
 [log]
