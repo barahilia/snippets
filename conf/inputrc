@@ -1,8 +1,13 @@
+# Ignore case
+set completion-ignore-case on
+
 # Use Vi, not Emacs, style editing
 set editing-mode vi
 
-# Ignore case
-set completion-ignore-case on
+# Change cursor in insert and command modes
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[5 q\2
+set vi-cmd-mode-string \1\e[2 q\2
 
 # Keymaps for insert mode
 set keymap vi-insert
