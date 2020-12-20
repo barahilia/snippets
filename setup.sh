@@ -1,6 +1,6 @@
 #!/bin/sh
 
-repo_dir=$(dirname $0)
+repo_dir=$(readlink -f $(dirname $0))
 conf_dir=${repo_dir}/conf
 
 sudo apt install -y \
@@ -12,7 +12,7 @@ sudo apt install -y \
 sudo apt purge appstream
 
 bat_deb=bat_0.15.4_amd64.deb
-curl -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
+curl -L -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
 sudo dpkg -i $bat_deb
 rm $bat_deb
 
@@ -35,16 +35,16 @@ mkdir -p \
 ln -s /usr/bin/python3 ~/bin/python
 ln -s /usr/bin/fasd ~/bin/fasd
 
-ln -s ~/.profile ${conf_dir}/profile
-ln -s ~/.bashrc ${conf_dir}/bashrc
-ln -s ~/.aliases ${conf_dir}/aliases
-ln -s ~/.inputrc ${conf_dir}/inputrc
+ln -sf ${conf_dir}/profile ~/.profile
+ln -sf ${conf_dir}/bashrc ~/.bashrc
+ln -sf ${conf_dir}/aliases ~/.aliases
+ln -sf ${conf_dir}/inputrc ~/.inputrc
 
-ln -s ~/.vimrc ${conf_dir}/vimrc
-ln -s ~/.tmux.conf ${conf_dir}/tmux.conf
-ln -s ~/.config/user-dirs.dirs ${conf_dir}/user-dirs.dirs
+ln -sf ${conf_dir}/vimrc ~/.vimrc
+ln -sf ${conf_dir}/tmux.conf ~/.tmux.conf
+ln -sf ${conf_dir}/user-dirs.dirs ~/.config/user-dirs.dirs
 
-cat ${conf_dir}/gitconfig.base \
+cat ${conf_dir}/gitconfig.base | \
     sed "s.<CONF_DIR>.${conf_dir}." > ~/.config/git/config
 
 python -m pip install --upgrade pip
