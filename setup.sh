@@ -9,6 +9,8 @@ sudo apt install -y \
     openjdk-11-jre-headless \
     fasd jq meld fzf ripgrep
 
+sudo apt purge appstream
+
 bat_deb=bat_0.15.4_amd64.deb
 curl -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
 sudo dpkg -i $bat_deb
