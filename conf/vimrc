@@ -66,4 +66,4 @@ let g:ale_linters = {
 \    'python': ['flake8', 'pyls']
 \}
 
-nnoremap <silent> <Leader>ag :ALEGoToDefinition<CR>
+nmap <silent> <Leader>ag <Plug>(ale_go_to_definition)
