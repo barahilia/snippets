@@ -65,3 +65,5 @@ let ropevim_global_prefir = '<Leader>p'
 let g:ale_linters = {
 \    'python': ['flake8', 'pyls']
 \}
+
+nnoremap <silent> <Leader>ag :ALEGoToDefinition<CR>
