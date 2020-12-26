@@ -11,12 +11,14 @@ tables
 
 matplotlib
 opencv-python
-Pillow
 
 tldr
+
+python-language-server
 
 # Linting and refactoring
 flake8
 rope
 ropemode
 ropevim
+jedi
