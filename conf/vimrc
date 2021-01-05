@@ -73,3 +73,4 @@ let g:ale_linters = {
 
 nmap <silent> <Leader>ag <Plug>(ale_go_to_definition)
 nmap <silent> <Leader>au <Plug>(ale_find_references)
+nmap <silent> <Leader>a<Space> <Plug>(ale_toggle)
