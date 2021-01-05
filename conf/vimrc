@@ -1,6 +1,5 @@
 " General
 syntax on
-set showcmd
 set encoding=utf-8
 set shell=/bin/bash
 
@@ -12,7 +11,10 @@ set softtabstop=4
 set autoindent
 set shiftwidth=4
 
-" Line numbers
+" Editor
+set showcmd
+set hidden
+set wildmenu
 set number
 set numberwidth=4
 
@@ -24,7 +26,10 @@ set noswapfile
 " Mappings
 let mapleader = " "
 inoremap jk <ESC>
-nnoremap <Leader>w <C-w>
+
+nmap <Leader>w <C-w>
+" Maximaze current buffer
+nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
 
 " Aid to setup `lightline` plugin
 set laststatus=2
