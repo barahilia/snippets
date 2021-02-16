@@ -81,6 +81,14 @@ export FZF_CTRL_T_OPTS="--preview '\
 source ~/bin/fzf-etc/key-bindings.bash
 source ~/bin/fzf-etc/completion.bash
 
+# Convenience shortcut to visually choose a git branch
+_git_branch() {
+    git branch -a | fzf | sed 's/^* //'
+}
+bind -m vi-insert '"\e\C-e": shell-expand-line'
+bind -m vi-insert '"\er": redraw-current-line'
+bind -m vi-insert '"\C-gb": "$(_git_branch)\e\C-e\er"'
+
 # Config bat
 export BAT_THEME="OneHalfDark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
