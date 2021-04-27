@@ -23,6 +23,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Mouse support
+set mouse=a
+set ttymouse=xterm2 " for mouse to work under tmux
+
 " Mappings
 let mapleader = " "
 inoremap jk <ESC>
