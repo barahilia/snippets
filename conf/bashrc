@@ -63,7 +63,7 @@ if ! shopt -oq posix; then
 fi
 
 # Editor and language
-VISUAL=vim
+export VISUAL=vim
 LANG=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 

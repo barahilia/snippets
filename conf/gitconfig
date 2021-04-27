@@ -1,8 +1,6 @@
 [user]
     name = Ilia Barahovsky
 # email = name@server.com
-[core]
-    editor = vim
 [push]
     default = simple
 [merge]
