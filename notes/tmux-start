@@ -1,0 +1,17 @@
+#!/bin/sh
+
+tmux set-option -g status-position top
+
+tmux new-session -s work -d
+
+tmux rename-window -t work maintain
+tmux send-keys -t work 'sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+tmux split-window -t work
+tmux send-keys -t work '~/bin/fix-dns'
+tmux split-window -h -t work -c ~/data/jupyter 'jupyter notebook --no-browser'
+
+tmux new-window -t work
+tmux rename-window -t work first
+tmux split-window -h -t work
+
+tmux attach -t work
