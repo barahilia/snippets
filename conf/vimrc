@@ -34,6 +34,8 @@ inoremap jk <ESC>
 nmap <Leader>w <C-w>
 " Maximaze current buffer
 nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
+nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
+nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
 
 " Aid to setup `lightline` plugin
 set laststatus=2
