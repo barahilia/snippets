@@ -36,6 +36,7 @@ nmap <Leader>w <C-w>
 nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
 nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
 nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
+nmap <Leader>ln :source ~/.vim/namenoname.vim<CR>
 
 " Aid to setup `lightline` plugin
 set laststatus=2
