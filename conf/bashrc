@@ -67,6 +67,9 @@ export VISUAL=vim
 LANG=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
+# Python - no cache files
+export PYTHONDONTWRITEBYTECODE=1
+
 # Setup fasd
 if [ -x ~/bin/fasd ]; then
     eval "$(~/bin/fasd --init auto)"
