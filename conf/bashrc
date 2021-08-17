@@ -70,6 +70,9 @@ LC_ALL=en_US.UTF-8
 # Python - no cache files
 export PYTHONDONTWRITEBYTECODE=1
 
+# Less to ignore case in searches
+export LESS="i"
+
 # Setup fasd
 if [ -x ~/bin/fasd ]; then
     eval "$(~/bin/fasd --init auto)"

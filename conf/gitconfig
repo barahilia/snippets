@@ -13,5 +13,7 @@
     lone = log --date=short --pretty='format:%C(yellow)%h %C(green)%ad %C(blue)%aN%C(red)%d %C(reset)%s'
 [color]
     ui = auto
+[core]
+    pager = less -FRX
 [log]
     decorate = auto
