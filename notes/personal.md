@@ -2,6 +2,12 @@
 layout: post
 ---
 
+## gdb
+
+* breakpoint - `b basename.cpp:15`
+* sources view - `-`
+* close source view - `Ctrl-X A`
+
 ## git
 
 * branch deletion - local - `git branch -d`
