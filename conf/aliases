@@ -1,11 +1,17 @@
+# Customize builtins
 alias df='df -h -x"squashfs"'
 alias du='du -h'
 alias free='free -h'
 alias md='mkdir'
+alias grep='grep --color=auto -i'
+alias column='column -t'
+
+# For ls to hide Python files
 alias ls='/bin/ls --color=auto --hide=*.pyc'
 alias ll='/bin/ls --color=auto -lh'
 alias la='/bin/ls --color=auto -A'
-alias grep='grep --color=auto -i'
+
+# Personal mini-tools
 alias cgrep='grep --color=force -i'
 alias abspath='readlink -f'
 alias cuts='cut -d" "'
@@ -14,4 +20,3 @@ alias counter='sort | uniq -c'
 alias split-space='tr " " "\n"'
 alias header-nums='head -n1 | tr " " "\n" | nl'
 alias cdiff='git diff --no-index'
-alias column='column -t'
