@@ -18,3 +18,5 @@
     pager = less -FRX
 [log]
     decorate = auto
+[help]
+    autocorrect = 15
