@@ -53,6 +53,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'python-rope/ropevim'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 " Configure plugins
@@ -80,3 +81,6 @@ let g:ale_linters = {
 nmap <silent> <Leader>ag <Plug>(ale_go_to_definition)
 nmap <silent> <Leader>au <Plug>(ale_find_references)
 nmap <silent> <Leader>a<Space> <Plug>(ale_toggle)
+
+let g:auto_save = 1
+let g:auto_save_silent = 1
