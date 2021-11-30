@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo mount -t fuse \
+    -o defaults,allow_other,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/home/user/.ssh/id_rsa \
+    'sshfs#user@domain:/remote/path' \
+    /local/path
