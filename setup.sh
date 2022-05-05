@@ -11,8 +11,9 @@ sudo apt install -y \
 
 sudo apt purge appstream
 
-bat_deb=bat_0.15.4_amd64.deb
-curl -L -O https://github.com/sharkdp/bat/releases/download/v0.15.4/$bat_deb
+bat_ver=0.20.0
+bat_deb=bat_${bat_ver}_amd64.deb
+curl -L -O https://github.com/sharkdp/bat/releases/download/v$bat_ver/$bat_deb
 sudo dpkg -i $bat_deb
 rm $bat_deb
 
