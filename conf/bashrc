@@ -4,10 +4,12 @@ case $- in
       *) return;;
 esac
 
-# History: no duplicate lines, append mode
+# Shell commands history
 HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTTIMEFORMAT="%Y-%m-%d %T "
+PROMPT_COMMAND="history -a"
 shopt -s histappend
 
 # Update LINES and COLUMNS after each command
