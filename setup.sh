@@ -44,6 +44,7 @@ ln -sf ${conf_dir}/inputrc ~/.inputrc
 ln -sf ${conf_dir}/vimrc ~/.vimrc
 ln -sf ${conf_dir}/tmux.conf ~/.tmux.conf
 ln -sf ${conf_dir}/user-dirs.dirs ~/.config/user-dirs.dirs
+ln -sf ${conf_dir}/ripgreprc ~/.config/ripgreprc
 
 cat ${conf_dir}/gitconfig.base | \
     sed "s.<CONF_DIR>.${conf_dir}." > ~/.config/git/config
