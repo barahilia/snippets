@@ -34,6 +34,13 @@ inoremap jk <ESC>
 nmap <Leader>w <C-w>
 " Maximaze current buffer
 nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
+
+" Show file path for the current buffer
+nnoremap <Leader>p 1<C-g>
+
+" Highlight instances of token under the cursor
+nnoremap <Leader>h *N:set hlsearch!<CR>
+
 nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
 nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
 nmap <Leader>ln :source ~/.vim/namenoname.vim<CR>
