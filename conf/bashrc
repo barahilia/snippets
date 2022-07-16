@@ -81,7 +81,7 @@ if [ -x ~/bin/fasd ]; then
 fi
 
 # Config rg = ripgrep
-export RIPGREP_CONFIG_PATH=/homes/iliaba/.config/ripgreprc
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 
 # Setup and config fzf
 export FZF_DEFAULT_COMMAND='rg --files'
