@@ -104,3 +104,8 @@ bind -m vi-insert '"\C-gb": "$(_git_branch)\e\C-e\er"'
 # Config bat
 export BAT_THEME="OneHalfDark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Apply local Bash configuration
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
