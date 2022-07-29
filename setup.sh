@@ -16,8 +16,8 @@ mkdir -p \
 # Consider running apt update before
 sudo apt install -y \
     tmux git vim curl \
-    python3-pip \
-    openjdk-11-jre \
+    python3-pip openjdk-11-jre \
+    freeplane \
     fasd jq meld fzf ripgrep
 
 sudo apt purge -y appstream
