@@ -17,6 +17,7 @@ set hidden
 set wildmenu
 set number
 set numberwidth=4
+set colorcolumn=80
 
 " Backup and swap files
 set nobackup
