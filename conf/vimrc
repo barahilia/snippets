@@ -40,7 +40,7 @@ nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
 nnoremap <Leader>p 1<C-g>
 
 " Highlight instances of token under the cursor
-nnoremap <Leader>h *N:set hlsearch!<CR>
+nnoremap <silent> <Leader>h :call IliaHighlight()<CR>
 
 nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
 nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
@@ -96,3 +96,16 @@ nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 
 let g:auto_save = 1
 let g:auto_save_silent = 1
+
+" Functions
+let g:ilia_highlight = 0
+
+function! IliaHighlight()
+    if g:ilia_highlight
+        let g:ilia_highlight = 0
+        match none
+    else
+        let g:ilia_highlight = 1
+        exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
+    endif
+endfunction
