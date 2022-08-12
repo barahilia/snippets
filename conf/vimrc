@@ -39,15 +39,16 @@ nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
 " Show file path for the current buffer
 nnoremap <Leader>lp 1<C-g>
 
+nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
+
 " Highlight instances of token under the cursor
-nnoremap <silent> <Leader>lh :call Highlight()<CR>
+nmap <silent> <Leader>lh :call personal#Highlight()<CR>
 
 " Replace visually selected region
-vnoremap <silent> <Leader>lr :call Replace()<CR>
+vmap <silent> <Leader>lr :call personal#Replace()<CR>
 
-nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
-nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
-nmap <Leader>ln :source ~/.vim/namenoname.vim<CR>
+nmap <Leader>ls :call personal#CppSwitch()<CR>
+nmap <Leader>ln :call personal#NameNoName()<CR>
 
 " Aid to setup `lightline` plugin
 set laststatus=2
@@ -99,22 +100,3 @@ nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 
 let g:auto_save = 1
 let g:auto_save_silent = 1
-
-" Functions
-let g:highlight = 0
-
-function! Highlight()
-    if g:highlight
-        let g:highlight = 0
-        match none
-    else
-        let g:highlight = 1
-        exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
-    endif
-endfunction
-
-function! Replace()
-    let @0 = @"
-    normal! gvd
-    normal! "0P
-endfunction
