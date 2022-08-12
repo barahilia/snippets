@@ -42,6 +42,9 @@ nnoremap <Leader>p 1<C-g>
 " Highlight instances of token under the cursor
 nnoremap <silent> <Leader>h :call IliaHighlight()<CR>
 
+" Replace visually selected region
+vnoremap <silent> <Leader>lr :call Replace()<CR>
+
 nmap <Leader>ls :source ~/.vim/cpp_switch.vim<CR>
 nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
 nmap <Leader>ln :source ~/.vim/namenoname.vim<CR>
@@ -108,4 +111,10 @@ function! IliaHighlight()
         let g:ilia_highlight = 1
         exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
     endif
+endfunction
+
+function! Replace()
+    let @0 = @"
+    normal! gvd
+    normal! "0P
 endfunction
