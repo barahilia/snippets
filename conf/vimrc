@@ -37,10 +37,10 @@ nmap <Leader>w <C-w>
 nnoremap <C-W>z :NERDTreeClose<CR><C-W>\|<C-W>_
 
 " Show file path for the current buffer
-nnoremap <Leader>p 1<C-g>
+nnoremap <Leader>lp 1<C-g>
 
 " Highlight instances of token under the cursor
-nnoremap <silent> <Leader>h :call IliaHighlight()<CR>
+nnoremap <silent> <Leader>lh :call Highlight()<CR>
 
 " Replace visually selected region
 vnoremap <silent> <Leader>lr :call Replace()<CR>
@@ -101,14 +101,14 @@ let g:auto_save = 1
 let g:auto_save_silent = 1
 
 " Functions
-let g:ilia_highlight = 0
+let g:highlight = 0
 
-function! IliaHighlight()
-    if g:ilia_highlight
-        let g:ilia_highlight = 0
+function! Highlight()
+    if g:highlight
+        let g:highlight = 0
         match none
     else
-        let g:ilia_highlight = 1
+        let g:highlight = 1
         exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
     endif
 endfunction
