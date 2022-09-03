@@ -78,6 +78,13 @@ nnoremap <silent> <Leader>tf :NERDTreeFind<CR>
 
 colorscheme seoul256
 
+" Ignore filenames in files search
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   "rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>),
+  \   1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
+  \   <bang>0)
+
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fr :Rg<CR>
 nnoremap <Leader>fb :Buffers<CR>
