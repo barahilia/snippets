@@ -2,6 +2,25 @@
 layout: post
 ---
 
+## jekyll
+
+Creating and serving local site. In Ubuntu 22.04 with Ruby 3.0 needed to adapt
+the guide at https://jekyllrb.com/docs
+
+```sh
+gem install --user-install jekyll bundler
+
+alias jekyll=~/.gem/ruby/3.0.0/bin/jekyll
+alias bundle=~/.gem/ruby/3.0.0/bin/bundle
+
+jekyll new myblog
+cd myblog
+
+bundle config set --local path 'vendor/bundle'
+bundle add webrick
+bundle exec jekyll serve
+```
+
 ## gdb
 
 * breakpoint - `b basename.cpp:15`
@@ -116,7 +135,7 @@ Icon=sublime_text
 StartupNotify=true
 Categories=TextEditor;Development;
 ```
-* dir - /usr/share/pixmaps``
+* dir - /usr/share/pixmaps
 * man - `desktop-file-install(1)`
 * Windows placement on grid:
  * `Ctrl + Alt + 0-9` (on NumPad)
