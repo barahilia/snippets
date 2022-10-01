@@ -94,12 +94,19 @@ source ~/bin/fzf-etc/key-bindings.bash
 source ~/bin/fzf-etc/completion.bash
 
 # Convenience shortcut to visually choose a git branch
-_git_branch() {
-    git branch -a | fzf | sed 's/^* //'
+_git_branch_select() {
+    git branch -a -vv | fzf | cut -c3- | cut -d' ' -f1
 }
-bind -m vi-insert '"\e\C-e": shell-expand-line'
-bind -m vi-insert '"\er": redraw-current-line'
-bind -m vi-insert '"\C-gb": "$(_git_branch)\e\C-e\er"'
+
+_git_branch() {
+    local selected="$(_git_branch_select)"
+
+    # Insert $selected into the current input line
+    READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}$selected${READLINE_LINE:$READLINE_POINT}"
+    READLINE_POINT=$(( READLINE_POINT + ${#selected} ))
+}
+
+bind -m vi-insert -x '"\C-g": _git_branch'
 
 # Config bat
 export BAT_THEME="OneHalfDark"
