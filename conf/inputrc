@@ -1,6 +1,9 @@
 # Ignore case
 set completion-ignore-case on
 
+# Add slash when completing symlink directories
+set mark-symlinked-directories on
+
 # Use Vi, not Emacs, style editing
 set editing-mode vi
 
