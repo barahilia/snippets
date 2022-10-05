@@ -43,6 +43,7 @@ nmap <Leader>lb oimport ipdb; ipdb.set_trace()<ESC>
 
 " Highlight instances of token under the cursor
 nmap <silent> <Leader>lh :call personal#Highlight()<CR>
+nmap <silent> <Leader>lu :call personal#Unhighlight()<CR>
 
 " Replace visually selected region
 vmap <silent> <Leader>lr :call personal#Replace()<CR>

@@ -1,13 +1,10 @@
-let g:highlight = 0
+function personal#Unhighlight()
+    match none
+endfunction
+
 
 function personal#Highlight()
-    if g:highlight
-        let g:highlight = 0
-        match none
-    else
-        let g:highlight = 1
-        exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
-    endif
+    exec 'match' 'Search' '/\<' . expand("<cword>") . '\>/'
 endfunction
 
 
