@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NAME-CHANGEME"
+version = "0.1"
+description = "PUT DESCRIPTION HERE"
+dependencies = [
+    "THE OTHER PACKAGE(S)",
+]
+
+[project.scripts]
+pline-detect = "NAME-CHANGEME.module:main"
+
+[tool.setuptools]
+packages = ["NAME-CHANGEME"]
