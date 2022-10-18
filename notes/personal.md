@@ -2,6 +2,15 @@
 layout: post
 ---
 
+## jupyter
+
+Cleaning up notebook before committing into source control:
+
+```sh
+t=task.ipynb
+jupyter nbconvert --clear-output $t && sed -i '/"id":/d' $t
+```
+
 ## jekyll
 
 Creating and serving local site. In Ubuntu 22.04 with Ruby 3.0 needed to adapt
