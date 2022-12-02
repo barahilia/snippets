@@ -15,7 +15,7 @@ mkdir -p \
 
 # Consider running apt update before
 sudo apt install -y \
-    tmux git vim curl xclip \
+    tmux git vim-gtk3 curl xclip \
     python3-pip openjdk-11-jre \
     freeplane \
     fasd jq meld fzf ripgrep
