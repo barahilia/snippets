@@ -245,6 +245,7 @@ jarsigner $ALGO $KEYSTORE "$1" androiddebugkey < <(echo android)
 
 * U+2191 ↑
 * U+2193 ↓
+* U+00a9 ©
 * Linux - `Ctrl + Shift + u` - release - hex digits - `Enter` ('Space' in Sublime)
 
 ## jira
