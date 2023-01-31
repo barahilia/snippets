@@ -2,6 +2,9 @@ See an example file here in `pyproject.toml`. To install it locally run:
 ```sh
 # Go to the upper repository directory with pyproject.toml
 pip install -e .
+
+# Build wheel:
+pip wheel --no-deps
 ```
 
 The most modern links as of October 2022:
