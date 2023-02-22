@@ -13,7 +13,6 @@ alias la='/bin/ls --color=auto -A'
 
 # Personal mini-tools
 alias cgrep='grep --color=force -i'
-alias abspath='readlink -f'
 alias cuts='cut -d" "'
 alias wcl='wc -l'
 alias counter='sort | uniq -c'
