@@ -8,12 +8,16 @@ scipy
 
 pandas
 tables
+pyarrow
 
 matplotlib
 seaborn
 opencv-python
 
+# Utilities
 tldr
+visidata
+bpytop
 
 # Linting and refactoring
 flake8
