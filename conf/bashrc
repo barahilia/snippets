@@ -69,8 +69,9 @@ export VISUAL=vim
 LANG=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
-# Python - no cache files
+# Python - no cache files and allow pip at user level
 export PYTHONDONTWRITEBYTECODE=1
+export PIP_BREAK_SYSTEM_PACKAGES=1
 
 # Less to ignore case in searches
 export LESS="i"
