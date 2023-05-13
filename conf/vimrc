@@ -26,7 +26,10 @@ set noswapfile
 
 " Mouse support
 set mouse=a
-set ttymouse=xterm2 " for mouse to work under tmux
+
+if !has('nvim')
+  set ttymouse=xterm2 " for mouse to work under tmux
+endif
 
 " Mappings
 let mapleader = " "
