@@ -10,12 +10,12 @@ rmdir \
 mkdir -p \
     ~/bin ~/proj ~/repos ~/tmp \
     ~/data ~/data/desktop \
-    ~/.local ~/.local/bin \
-    ~/.config ~/.config/git
+    ~/.local ~/.local/bin ~/.local/share/nvim/site/autoload \
+    ~/.config ~/.config/git ~/.config/nvim
 
 # Consider running apt update before
 sudo apt install -y \
-    tmux git vim-gtk3 curl xclip \
+    tmux git neovim curl xclip \
     python3-pip openjdk-11-jre \
     freeplane \
     fasd jq meld fzf ripgrep
@@ -34,6 +34,11 @@ curl -o ~/bin/fzf-etc/completion.bash \
 curl -o ~/bin/fzf-etc/key-bindings.bash \
     https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
 
+ln -sf ${conf_dir}/vimrc ~/.config/nvim/init.vim
+ln -sf ${conf_dir}/personal.vim ~/.local/share/nvim/site/autoload/personal.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ln -s /usr/bin/python3 ~/bin/python
 ln -s /usr/bin/fasd ~/bin/fasd
 
@@ -42,9 +47,6 @@ ln -sf ${conf_dir}/bashrc ~/.bashrc
 ln -sf ${conf_dir}/aliases ~/.aliases
 ln -sf ${conf_dir}/inputrc ~/.inputrc
 
-ln -sf ${conf_dir}/vimrc ~/.vimrc
-mkdir -p ~/.vim/autoload
-ln -sf ${conf_dir}/personal.vim ~/.vim/autoload/personal.vim
 ln -sf ${conf_dir}/tmux.conf ~/.tmux.conf
 ln -sf ${conf_dir}/user-dirs.dirs ~/.config/user-dirs.dirs
 ln -sf ${conf_dir}/ripgreprc ~/.config/ripgreprc
