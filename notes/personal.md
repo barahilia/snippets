@@ -2,6 +2,29 @@
 layout: post
 ---
 
+## clangd
+
+Beside installing `clangd` the main part is to put the `compile_commands.json`
+at the project root. Otherwise `ALE` doesn't seem to run LSP at all. The other
+file `compile_flags.txt` is respected by `clangd` but not by `ALE`.
+One more caveat: `directory` must be absolute. Here's an example:
+
+```json
+[
+    {
+        "directory": "/home/user/repos/project",
+        "command": "g++ -Iinclude -o main.o main.cpp",
+        "file": "main.cpp"
+    }
+]
+```
+
+To verify setup, run in a shell:
+
+```sh
+clangd --check=main.cpp
+```
+
 ## jupyter
 
 Cleaning up notebook before committing into source control:
