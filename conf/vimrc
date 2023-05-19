@@ -99,8 +99,10 @@ nnoremap <Leader>fc :History:<CR>
 let ropevim_local_prefix = '<Leader>r'
 let ropevim_global_prefir = '<Leader>p'
 
+let g:ale_verbose = 1
 let g:ale_linters = {
-\    'python': ['flake8', 'jedils']
+\    'python': ['flake8', 'jedils'],
+\    'cpp': ['clangd'],
 \}
 let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace']
@@ -112,6 +114,8 @@ nmap <silent> <Leader>ag <Plug>(ale_go_to_definition)
 nmap <silent> <Leader>au <Plug>(ale_find_references)
 nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>an <Plug>(ale_next_wrap)
+nmap <silent> <Leader>ah <Plug>(ale_hover)
+nmap <silent> <Leader>ar :ALERename<CR>
 
 let g:auto_save = 1
 let g:auto_save_silent = 1

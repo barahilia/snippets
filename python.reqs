@@ -21,8 +21,8 @@ bpytop
 
 # Linting and refactoring
 flake8
-rope
-ropemode
-ropevim
+# rope
+# ropemode
+# ropevim
 jedi
 jedi-language-server
