@@ -1,5 +1,14 @@
 #!/bin/sh
 
+server_test=$(tmux ls 2>&1 | cut -c-17)
+
+if [ "$server_test" = "no server running" ]; then
+    echo "starting new tmux session..."
+else
+    echo "error: tmux session found"
+    exit 1
+fi
+
 tmux set-option -g status-position top
 
 tmux new-session -s work -d
