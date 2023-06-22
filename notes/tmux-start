@@ -1,8 +1,8 @@
 #!/bin/sh
 
-server_test=$(tmux ls 2>&1 | cut -c-17)
+server_test=$(tmux ls 2>&1 | grep -q 'error connecting\|no server running')
 
-if [ "$server_test" = "no server running" ]; then
+if [ -n "$server_test" ]; then
     echo "starting new tmux session..."
 else
     echo "error: tmux session found"
