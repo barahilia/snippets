@@ -34,6 +34,9 @@ t=task.ipynb
 jupyter nbconvert --clear-output $t && sed -i '/"id":/d' $t
 ```
 
+Fixing interactive `matplotlib` (relevant in 2023-06):
+https://discourse.jupyter.org/t/jupyter-notebook-zmq-message-arrived-on-closed-channel-error/17869/17
+
 ## jekyll
 
 Creating and serving local site. In Ubuntu 22.04 with Ruby 3.0 needed to adapt
