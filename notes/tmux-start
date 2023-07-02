@@ -18,6 +18,11 @@ tmux send-keys -t work 'sudo apt update && sudo apt upgrade -y && sudo apt autor
 tmux split-window -t work
 tmux send-keys -t work '~/bin/fix-dns'
 tmux split-window -h -t work -c ~/data/jupyter 'jupyter notebook --no-browser'
+tmux select-pane -t work -U
+tmux split-window -t work -h
+tmux send-keys -t work 'snap info firefox' C-m
+tmux split-window -t work -c ~/data/snap
+tmux send-keys -t work 'echo snap download firefox'
 
 tmux new-window -t work
 tmux rename-window -t work first
