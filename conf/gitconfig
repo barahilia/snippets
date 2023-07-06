@@ -3,6 +3,7 @@
 # email = name@server.com
 [push]
     default = simple
+    autoSetupRemote = true
 [merge]
     defaultToUpstream = true
 [alias]
