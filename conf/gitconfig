@@ -21,3 +21,5 @@
     decorate = auto
 [help]
     autocorrect = 15
+[init]
+	defaultBranch = main
