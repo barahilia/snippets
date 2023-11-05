@@ -20,6 +20,7 @@ sudo apt install -y \
     freeplane \
     fasd jq meld fzf ripgrep
 
+# Eliminate DEP-11 in apt update
 sudo apt purge -y appstream
 
 bat_ver=0.20.0
