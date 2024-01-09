@@ -1,8 +1,11 @@
+# Shortcuts
+alias md='mkdir'
+alias rp='realpath'
+
 # Customize builtins
 alias df='df -h -x"squashfs"'
 alias du='du -h'
 alias free='free -h'
-alias md='mkdir'
 alias grep='grep --color=auto -i'
 alias column='column -t'
 
