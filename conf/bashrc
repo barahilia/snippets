@@ -99,7 +99,7 @@ _git_branch_select() {
     git branch -a -vv | fzf | cut -c3- | cut -d' ' -f1
 }
 
-_git_branch() {
+_git_branch_substitute() {
     local selected="$(_git_branch_select)"
 
     # Insert $selected into the current input line
@@ -107,7 +107,7 @@ _git_branch() {
     READLINE_POINT=$(( READLINE_POINT + ${#selected} ))
 }
 
-bind -m vi-insert -x '"\C-g": _git_branch'
+bind -m vi-insert -x '"\C-g": _git_branch_substitute'
 
 # Config bat
 export BAT_THEME="OneHalfDark"
