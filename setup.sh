@@ -57,3 +57,5 @@ cat ${conf_dir}/gitconfig.base | \
 
 python3 -m pip install --upgrade pip
 pip install -r ${repo_dir}/python.reqs
+
+ln -s /home/iliab/.local/bin/bpytop top
