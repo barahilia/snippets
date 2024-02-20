@@ -116,6 +116,7 @@ nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 nmap <silent> <Leader>ah <Plug>(ale_hover)
 nmap <silent> <Leader>ar :ALERename<CR>
+nmap <silent> <Leader>al :call personal#AleLongLinesToggle()<CR>
 
 let g:auto_save = 1
 let g:auto_save_silent = 1
