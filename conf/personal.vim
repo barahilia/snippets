@@ -61,11 +61,12 @@ let g:personal_ale_long_lines_ignore = 0
 function personal#AleLongLinesToggle()
     if g:personal_ale_long_lines_ignore
         let g:ale_python_flake8_options = ''
-        execute "write"
         let g:personal_ale_long_lines_ignore = 0
     else
         let g:ale_python_flake8_options = '--ignore=E501'
-        execute "write"
         let g:personal_ale_long_lines_ignore = 1
     endif
+
+    " To refresh Ale warnings immediately
+    execute "write"
 endfunction
