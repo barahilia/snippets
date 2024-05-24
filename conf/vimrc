@@ -68,7 +68,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'python-rope/ropevim'
 Plug '907th/vim-auto-save'
 call plug#end()
 
@@ -95,9 +94,6 @@ nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fl :Lines<CR>
 nnoremap <Leader>fw :BLines<CR>
 nnoremap <Leader>fc :History:<CR>
-
-let ropevim_local_prefix = '<Leader>r'
-let ropevim_global_prefir = '<Leader>p'
 
 let g:ale_verbose = 1
 let g:ale_linters = {
