@@ -55,3 +55,13 @@ function personal#NameNoName()
 
     execute 'write' suggest
 endfunction
+
+function personal#NextPythonSection(backwards)
+    if a:backwards
+        let dir = '?'
+    else
+        let dir = '/'
+    endif
+
+    execute 'silent normal! ' . dir . '\v(def|class) ' . "\r"
+endfunction

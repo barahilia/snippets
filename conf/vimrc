@@ -119,3 +119,7 @@ nmap <silent> <Leader>ar :ALERename<CR>
 
 let g:auto_save = 1
 let g:auto_save_silent = 1
+
+" Which one: noremap nnoremap or nmap??
+nmap <script> <buffer> <silent> ]] :call personal#NextPythonSection(0)<CR>
+nmap <script> <buffer> <silent> [[ :call personal#NextPythonSection(1)<CR>
