@@ -111,6 +111,7 @@ bind -m vi-insert -x '"\C-g": _git_branch_substitute'
 
 # Config bat
 export BAT_THEME="OneHalfDark"
+export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Apply local Bash configuration
