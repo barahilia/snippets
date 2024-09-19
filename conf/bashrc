@@ -94,6 +94,11 @@ export FZF_CTRL_T_OPTS="--preview '\
 source ~/bin/fzf-etc/key-bindings.bash
 source ~/bin/fzf-etc/completion.bash
 
+# WIP: Convenience shortcut to choose child directory
+_find_dir_select() {
+    find . -mindepth 1 -maxdepth 1 -type d | cut -c3- | fzf
+}
+
 # Convenience shortcut to visually choose a git branch
 _git_branch_select() {
     git branch -a -vv | fzf | cut -c3- | cut -d' ' -f1
