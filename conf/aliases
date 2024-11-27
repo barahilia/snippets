@@ -1,6 +1,7 @@
 # Shortcuts
 alias md='mkdir'
 alias rp='realpath'
+alias bat='batcat'
 
 # Customize builtins
 alias df='df -h -x"squashfs"'

@@ -18,16 +18,10 @@ sudo apt install -y \
     tmux git neovim curl xclip \
     python3-pip openjdk-11-jre \
     freeplane \
-    fasd jq meld fzf ripgrep
+    fasd jq meld fzf ripgrep bat
 
 # Eliminate DEP-11 in apt update
 sudo apt purge -y appstream
-
-bat_ver=0.20.0
-bat_deb=bat_${bat_ver}_amd64.deb
-curl -L -O https://github.com/sharkdp/bat/releases/download/v$bat_ver/$bat_deb
-sudo dpkg -i $bat_deb
-rm $bat_deb
 
 mkdir -p ~/bin/fzf-etc
 curl -o ~/bin/fzf-etc/completion.bash \
