@@ -4,16 +4,15 @@ alias rp='realpath'
 alias bat='batcat'
 
 # Customize builtins
+alias ls='ls --color=auto'
+alias ll='ls -lh'
+alias la='ls -A'
+
 alias df='df -h -x"squashfs"'
 alias du='du -h'
 alias free='free -h'
 alias grep='grep --color=auto -i'
 alias column='column -t'
-
-# For ls to hide Python files
-alias ls='/bin/ls --color=auto --hide=*.pyc'
-alias ll='/bin/ls --color=auto -lh'
-alias la='/bin/ls --color=auto -A'
 
 # Personal mini-tools
 alias cgrep='grep --color=force -i'
