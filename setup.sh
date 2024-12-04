@@ -35,7 +35,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s /usr/bin/python3 ~/bin/python
-ln -s /usr/bin/fasd ~/bin/fasd
 
 ln -sf ${conf_dir}/profile ~/.profile
 ln -sf ${conf_dir}/bashrc ~/.bashrc
@@ -52,4 +51,4 @@ cat ${conf_dir}/gitconfig.base | \
 python3 -m pip install --upgrade pip
 pip install -r ${repo_dir}/python.reqs
 
-ln -s /home/iliab/.local/bin/bpytop top
+ln -s ~/.local/bin/bpytop ~/bin/top
