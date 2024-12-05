@@ -17,7 +17,7 @@ set hidden
 set wildmenu
 set number
 set numberwidth=4
-set colorcolumn=80
+set colorcolumn=89
 
 " Backup and swap files
 set nobackup
@@ -103,6 +103,8 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace']
 \}
+let g:ale_python_flake8_options =
+      \ '--max-line-length=88 --extend-ignore=E203,E701'
 
 nmap <silent> <Leader>a<Space> <Plug>(ale_toggle)
 nmap <silent> <Leader>af <Plug>(ale_fix)
