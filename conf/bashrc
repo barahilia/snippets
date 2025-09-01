@@ -116,6 +116,21 @@ _git_branch_substitute() {
 
 bind -m vi-insert -x '"\C-g": _git_branch_substitute'
 
+# Convenience shortcut to visually choose a local file or directory
+_dir_ls_select() {
+    ls | fzf
+}
+
+_dir_ls_substitute() {
+    local selected="$(_dir_ls_select)"
+
+    # Insert $selected into the current input line
+    READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}$selected${READLINE_LINE:$READLINE_POINT}"
+    READLINE_POINT=$(( READLINE_POINT + ${#selected} ))
+}
+
+bind -m vi-insert -x '"\C-l": _dir_ls_substitute'
+
 # Config bat
 export BAT_THEME="OneHalfDark"
 export MANROFFOPT="-c"
